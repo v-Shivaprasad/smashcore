@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smash Karts Cloud Bot</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; }
+        #novnc { width: 90vw; height: 60vh; border: 2px solid #333; margin: 1em auto; display: block; }
+        button { font-size: 1.2em; margin: 1em; }
+    </style>
+</head>
+<body>
+    <h1>Smash Karts Cloud Bot</h1>
+    <iframe id="novnc" src="/novnc/vnc.html?host=localhost&port=6080&autoconnect=true"></iframe>
+    <div>
+        <button onclick="fetch('/start-bot', {method:'POST'}).then(()=>alert('Bot started!'))">Start Bot</button>
+        <button onclick="fetch('/stop-bot', {method:'POST'}).then(()=>alert('Bot stopped!'))">Stop Bot</button>
+    </div>
+    <p>1. Log in and join a game in the window above.<br>
+    2. Click "Start Bot" to let the bot play for you!</p>
+</body>
+</html> 
