@@ -22,7 +22,7 @@ def stop_bot():
 
 @app.route('/novnc/<path:filename>')
 def serve_novnc(filename):
-    return send_from_directory('/novnc', filename)
+    return send_from_directory('static/novnc', filename)
 
 if __name__ == "__main__":
     bot_instance.setup_browser_bg()
